@@ -1,0 +1,242 @@
+/* PopUp */
+.popup {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.login_btn {
+    position: fixed;
+    left: 10%;
+    top: 10%;
+}
+
+.form__box { 
+    height: 600px; 
+    width: 400px;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    perspective: 1000px;
+}    
+
+.flip__inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary-variant);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    transition: var(--transition);
+    transform-style: preserve-3d;
+}    
+
+.form__box.flipped .flip__inner {
+    transform: rotateY(180deg);
+}  
+  
+.front__box, .back__box { 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../../assets/Meteor-Front.svg);
+    backface-visibility: hidden;
+}
+
+.front__btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.flip__btn { 
+    clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
+    background: var(--color-button);
+    color: var(--color-white);
+    padding: 0.5rem 6rem;
+}
+
+.close__btn { 
+    clip-path: polygon(40% 0, 100% 0%, 100% 100%, 0% 100%);
+    background: var(--color-button);
+    color: var(--color-white);
+    padding: 1.5rem 3rem;
+    position: relative;
+}
+.close__icon {
+    position: absolute;
+    top: 22%;
+    font-size: 1.7rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+input { 
+    background: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color-white); 
+    color: var(--color-white);
+    margin-bottom: 2rem; 
+    padding: 0.2rem 1rem;
+    transition: var(--transition);
+}
+
+.btn__submit {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 0;
+    margin-bottom: 3.4rem;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.checkbox > input{
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--color-white);
+}
+.check__text {
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
+.back__box { 
+    background-image: url(../../assets/Meteor-Back.svg); 
+    transform: rotateY(180deg);
+}
+.back__box  .flip__btn {
+    padding: 0.5rem 7.22rem;
+} 
+
+.social_btn {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+.social_btn > button {
+    display: flex;
+    background: none;
+    gap: 0.5rem;
+}
+
+.social_btn span {
+    clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
+}
+
+.social_btn > button:nth-child(1) span{
+    padding-right: 3rem;
+}
+
+.social_btn > button:nth-child(2) span{
+    padding-right: 4.5rem;
+}
+
+.social_btn > button:nth-child(3) span{
+    padding-right: 4.4rem;
+}
+
+.icon__f, .icon__t, .icon__g, .icon__l {
+    color: var(--color-white);
+    font-size: 3.3rem;
+    padding: 0.6rem 1.5rem;
+}
+.icon__f{
+    background: #4267B2;
+}
+.icon__t{
+    background: #1DA1F2;
+}
+.icon__g{
+    background: #DB4437;
+}
+.icon__l{
+    background: #0077b5;
+}
+
+
+.jello-horizontal {
+	-webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s both;
+}
+
+/*
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  
