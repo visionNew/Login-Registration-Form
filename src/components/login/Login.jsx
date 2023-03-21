@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './login.css'; // CSS FILE FOR COMPONENT
 import { useState } from 'react'; // REACT HOOKS
-import { BsFillPersonFill } from 'react-icons/bs'; // IMPORT ICON FILE
-import { FaRegWindowClose, FaFacebook, FaTwitter, FaGoogle, FaLinkedinIn } from 'react-icons/fa'; // IMPORT ICON FILE
+import { FaRegWindowClose, FaFacebook, FaTwitter, FaGoogle, FaLinkedinIn, FaEnvelope, FaUser, FaLock } from 'react-icons/fa'; // IMPORT ICON FILE
 
 const Login = () => {
 // START FUNCTION FOR POPUP
@@ -19,9 +18,9 @@ const handleClick = () => {
 
   return (
     <div className="popup">
-        <div onClick={togglePopup} className="btn login_btn">Login <BsFillPersonFill /> </div>
+        <div onClick={togglePopup} className="btn login_btn">Login <FaUser /> </div>
       
-         {    isOpen &&
+        {    isOpen &&
                 <div className={isFlipped ? "form__box flipped jello-horizontal" : "form__box jello-horizontal"}>
                     <div className="flip__inner">
                       <div className="front__box">
@@ -31,6 +30,9 @@ const handleClick = () => {
                           </div>
                           <h2> Sign Up</h2>
                           <form>
+                            <div className='form_icons'>
+                            <FaUser /> <FaEnvelope /> <FaLock /> <FaLock />
+                            </div>
                             <input type="text" name="username" placeholder="Username"/>
                             <input type="email" name="email" placeholder="Email"/>
                             <input type="password" name="password" placeholder="Password"/>
